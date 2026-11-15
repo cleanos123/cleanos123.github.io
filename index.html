@@ -4,187 +4,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carlos Leanos - Computer Science graduate (CSULB, Dec 2026) with CompTIA Security+. IT support, networking, systems administration and cybersecurity portfolio.">
     <title>Carlos Leanos | IT & Cybersecurity Portfolio</title>
 
     <style>
+        :root {
+            --text: #1f2933;
+            --muted: #52606d;
+            --accent: #0b5cad;
+            --border: #e4e7eb;
+            --bg-soft: #f5f7fa;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            color: var(--text);
             max-width: 900px;
             margin: 40px auto;
             padding: 0 20px;
             line-height: 1.6;
         }
 
+        header {
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border);
+        }
+
         h1 {
-            margin-bottom: 5px;
+            margin: 0 0 4px;
+            font-size: 2.2rem;
+        }
+
+        .tagline {
+            margin: 0 0 12px;
+            font-size: 1.15rem;
+            color: var(--muted);
+        }
+
+        .links a {
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 6px;
+            padding: 6px 14px;
+            border: 1px solid var(--accent);
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+
+        .links a:hover {
+            background: var(--accent);
+            color: #fff;
         }
 
         h2 {
-            margin-top: 35px;
+            margin-top: 40px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--border);
+            font-size: 1.4rem;
         }
 
         h3 {
-            margin-bottom: 5px;
+            margin: 0 0 4px;
+            font-size: 1.1rem;
         }
 
         a {
+            color: var(--accent);
             text-decoration: none;
         }
 
-        .project {
-            margin-bottom: 25px;
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .meta {
+            margin: 0 0 8px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .card {
+            margin-bottom: 18px;
+            padding: 16px 18px;
+            background: var(--bg-soft);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        .card p,
+        .card ul {
+            margin: 6px 0;
+        }
+
+        .card ul {
+            padding-left: 20px;
+        }
+
+        .tags {
+            margin: 8px 0 4px;
+        }
+
+        .tag {
+            display: inline-block;
+            margin: 0 6px 6px 0;
+            padding: 2px 10px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            font-size: 0.82rem;
+            color: var(--muted);
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 14px;
+        }
+
+        .skills .card h3 {
+            font-size: 1rem;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 4px 16px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.9rem;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>Carlos Leanos</h1>
-    <h2>Computer Science Student | CompTIA Security+ | IT & Cybersecurity</h2>
-
-    <hr>
+    <header>
+        <h1>Carlos Leanos</h1>
+        <p class="tagline">B.S. Computer Science (CSULB, December 2026) &middot; CompTIA Security+ &middot; IT Support, Networking &amp; Cybersecurity</p>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/carlos-leanos-721699197/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/cleanos123" target="_blank" rel="noopener">GitHub</a>
+        </div>
+    </header>
 
     <h2>About Me</h2>
 
     <p>
-        Welcome to my portfolio. I am a Computer Science student at California
-        State University, Long Beach with a CompTIA Security+ certification.
-        I am interested in IT support, networking, systems administration,
-        cybersecurity, and systems engineering.
+        I am a Computer Science student at California State University, Long Beach, graduating in
+        December 2026, and I hold the CompTIA Security+ (SY0-701) certification. I enjoy
+        troubleshooting, building and securing networks, and learning through hands-on projects
+        in my home lab. I am looking for entry-level roles in IT support, systems and network
+        administration, and cybersecurity.
     </p>
 
     <h2>Technical Skills</h2>
 
-    <ul>
-        <li>Windows & Linux</li>
-        <li>Active Directory</li>
-        <li>TCP/IP, DNS & DHCP</li>
-        <li>Network Troubleshooting</li>
-        <li>Hardware Troubleshooting</li>
-        <li>Git & GitHub</li>
-        <li>C++, Python & Java</li>
-        <li>Figma & Interactive Prototyping</li>
-    </ul>
+    <div class="skills">
+        <div class="card">
+            <h3>Systems &amp; Support</h3>
+            <p>Windows 10/11, Linux, Active Directory, virtualization, PC hardware, troubleshooting, Microsoft 365, Teams</p>
+        </div>
+        <div class="card">
+            <h3>Networking</h3>
+            <p>TCP/IP, DNS, DHCP, VLANs, NAT, VPNs, LAN/WAN, SSH, TLS/SSL, HTTPS</p>
+        </div>
+        <div class="card">
+            <h3>Security</h3>
+            <p>Nmap, Wireshark, Kali Linux, Tripwire, NIST CSF 2.0, NIST SP 800-30, STRIDE, system hardening, audit logging</p>
+        </div>
+        <div class="card">
+            <h3>Development &amp; Tools</h3>
+            <p>Python, Java, C++, C, MySQL, Git/GitHub, Jira, Figma</p>
+        </div>
+    </div>
 
     <h2>Projects</h2>
 
-    <div class="project">
-        <h3>Cybersecurity Risk Assessment & Threat Modeling</h3>
-
-        <p>
-            Conducted a cybersecurity risk assessment using OCTAVE Allegro,
-            NIST SP 800-30, NIST CSF 2.0, and STRIDE. The project included
-            threat modeling, gap analysis, HTTP security-header analysis,
-            Windows 11 hardening, and audit logging.
-        </p>
-
-        <a href="https://github.com/cleanos123/cybersecurity-risk-assessment"
-           target="_blank">
-            View Project on GitHub
-        </a>
-    </div>
-
-    <div class="project">
-        <h3>Home Lab</h3>
-
-        <p>
-            Building a home lab to gain hands-on experience with virtualization,
-            networking, Windows Server, Linux, Active Directory, cybersecurity,
-            and system administration.
-        </p>
-    </div>
-
-    <div class="project">
-        <h3>IP Camera & NVR Deployment</h3>
-
+    <div class="card">
+        <h3>Cybersecurity Risk Assessment &amp; Threat Modeling</h3>
+        <div class="tags">
+            <span class="tag">OCTAVE Allegro</span><span class="tag">NIST SP 800-30</span><span class="tag">NIST CSF 2.0</span><span class="tag">STRIDE</span><span class="tag">Windows 11</span>
+        </div>
         <ul>
-            <li>
-                Installed and configured a multi-camera IP surveillance system
-                with NVR recording and storage.
-            </li>
-            <li>
-                Connected and configured networked cameras and verified
-                network connectivity.
-            </li>
-            <li>
-                Configured recording, storage, and remote viewing settings.
-            </li>
-            <li>
-                Troubleshot device, network, and connectivity issues.
-            </li>
+            <li>Conducted a full risk assessment using OCTAVE Allegro and NIST SP 800-30, mapped against NIST CSF 2.0.</li>
+            <li>Built a STRIDE threat model and performed a gap analysis of existing controls.</li>
+            <li>Analyzed HTTP security headers, hardened a Windows 11 system, and configured audit logging.</li>
+        </ul>
+        <a href="https://github.com/cleanos123/cybersecurity-risk-assessment" target="_blank" rel="noopener">View project on GitHub &rarr;</a>
+    </div>
+
+    <div class="card">
+        <h3>Home Lab &amp; Custom Server Rack</h3>
+        <div class="tags">
+            <span class="tag">Networking</span><span class="tag">Virtualization</span><span class="tag">Windows Server</span><span class="tag">Linux</span><span class="tag">Blender</span><span class="tag">3D Printing</span>
+        </div>
+        <ul>
+            <li>Designed and 3D-printed a custom rack in Blender for a Dell OptiPlex-based home lab.</li>
+            <li>Connected multiple systems through a network switch to practice hardware setup, system configuration, and network troubleshooting.</li>
+            <li>Using the lab to build hands-on experience with virtualization, Windows Server, Linux, Active Directory, and security tooling.</li>
         </ul>
     </div>
 
-    <div class="project">
+    <div class="card">
         <h3>Secure HTTPS Photo Server</h3>
-
-        <p>
-            Configured a self-hosted HTTPS server while gaining experience
-            with networking, TLS, system administration, and server security.
-        </p>
+        <div class="tags">
+            <span class="tag">C</span><span class="tag">OpenBSD</span><span class="tag">HTTPS/TLS</span>
+        </div>
+        <ul>
+            <li>Built and deployed a self-hosted HTTPS photo server using C on OpenBSD.</li>
+            <li>Configured TLS, server services, and network access, and troubleshot connectivity issues.</li>
+        </ul>
     </div>
 
-    <div class="project">
+    <div class="card">
+        <h3>IP Camera &amp; NVR Deployment</h3>
+        <div class="tags">
+            <span class="tag">IP Networking</span><span class="tag">NVR</span><span class="tag">Remote Access</span>
+        </div>
+        <ul>
+            <li>Installed and configured a multi-camera IP surveillance system with NVR recording and storage.</li>
+            <li>Configured recording, storage, and remote viewing settings.</li>
+            <li>Troubleshot device, network, and connectivity issues to keep cameras communicating and recording reliably.</li>
+        </ul>
+    </div>
+
+    <div class="card">
         <h3>Multithreaded Client-Server Application</h3>
-
-        <p>
-            Developed a C++ client-server application using TCP/IP sockets
-            and multithreading.
-        </p>
+        <div class="tags">
+            <span class="tag">C++</span><span class="tag">TCP/IP Sockets</span><span class="tag">Multithreading</span>
+        </div>
+        <p>Developed a C++ client-server application that communicates over TCP/IP sockets and handles multiple clients using multithreading.</p>
     </div>
 
-    <div class="project">
-        <h3>Echo Meeting & Task Management Prototype</h3>
+    <h3 style="margin-top: 28px;">UI / UX Prototypes</h3>
+    <p class="meta">Software engineering course projects designed in Figma.</p>
 
-        <p>
-            Designed an interactive Figma prototype for a meeting and task
-            management platform featuring task creation, meeting tracking,
-            transcript viewing, summary management, departments, and account
-            settings.
-        </p>
-
-        <a href="https://www.figma.com/design/LFnmK52XO3v7JyitXvabDs/Untitled?node-id=0-1&t=74It6YZ06IrOa4Yu-1"
-           target="_blank">
-            View Echo Prototype
-        </a>
+    <div class="card">
+        <h3>Echo: Meeting &amp; Task Management Prototype</h3>
+        <p>Interactive prototype featuring task creation, meeting tracking, transcript viewing, summary management, departments, and account settings.</p>
+        <a href="https://www.figma.com/design/LFnmK52XO3v7JyitXvabDs/Untitled?node-id=0-1&t=74It6YZ06IrOa4Yu-1" target="_blank" rel="noopener">View Echo prototype &rarr;</a>
     </div>
 
-    <div class="project">
+    <div class="card">
         <h3>Fridge Management UI Prototype</h3>
-
-        <p>
-            Designed an interactive multi-screen Figma prototype demonstrating
-            user authentication, account management, fridge management,
-            inventory workflows, and interactive navigation.
-        </p>
-
-        <a href="https://www.figma.com/design/bDQeHVOFtpc10x3Eeji5VX/Fridge-Project?node-id=0-1&t=KVzwSjhC2agYOnEy-1"
-           target="_blank">
-            View Fridge Prototype
-        </a>
+        <p>Multi-screen prototype demonstrating user authentication, account management, fridge and inventory workflows, and interactive navigation.</p>
+        <a href="https://www.figma.com/design/bDQeHVOFtpc10x3Eeji5VX/Fridge-Project?node-id=0-1&t=KVzwSjhC2agYOnEy-1" target="_blank" rel="noopener">View Fridge prototype &rarr;</a>
     </div>
 
-    <h2>Certifications</h2>
+    <h2>Experience</h2>
 
-    <p>
-        <strong>CompTIA Security+</strong> (SY0-701)
-    </p>
+    <div class="card">
+        <div class="row">
+            <h3>Student Professional Worker &middot; Port of Los Angeles</h3>
+            <span class="meta">January 2026 &ndash; Present</span>
+        </div>
+        <ul>
+            <li>Manage digital and physical records using enterprise databases and internal systems while maintaining accuracy and confidentiality.</li>
+            <li>Perform data entry, validation, document retrieval, and records management across departmental systems.</li>
+            <li>Respond to and coordinate administrative and technical requests across departments while meeting deadlines.</li>
+        </ul>
+    </div>
 
-    <h2>Contact</h2>
+    <div class="card">
+        <div class="row">
+            <h3>Computer Support Assistant &middot; Good Ideas Metal Spinning</h3>
+            <span class="meta">March 2017 &ndash; May 2018</span>
+        </div>
+        <ul>
+            <li>Provided computer setup and troubleshooting support for company workstations.</li>
+            <li>Resolved common Windows, software, hardware, connectivity, and peripheral issues.</li>
+            <li>Handled software installation, updates, and general computer maintenance.</li>
+        </ul>
+    </div>
 
-    <p>
-        <a href="https://www.linkedin.com/in/carlos-leanos-721699197/"
-           target="_blank">
-            LinkedIn
-        </a>
-    </p>
+    <h2>Education &amp; Certifications</h2>
 
-    <p>
-        <a href="https://github.com/cleanos123"
-           target="_blank">
-            GitHub
-        </a>
-    </p>
+    <div class="card">
+        <div class="row">
+            <h3>B.S. Computer Science &middot; California State University, Long Beach</h3>
+            <span class="meta">Expected December 2026</span>
+        </div>
+        <p class="meta">Relevant coursework: Operating Systems, Software Engineering, Computer Security Principles, Data Security &amp; Privacy, Networks &amp; Distributed Computing, Cybersecurity in Business</p>
+    </div>
+
+    <div class="card">
+        <div class="row">
+            <h3>Associate Degree for Transfer, Computer Science &middot; Cerritos College</h3>
+            <span class="meta">May 2024</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="row">
+            <h3>CompTIA Security+ (SY0-701)</h3>
+            <span class="meta">Issued June 2026 &middot; Expires June 2029</span>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            Let's connect on
+            <a href="https://www.linkedin.com/in/carlos-leanos-721699197/" target="_blank" rel="noopener">LinkedIn</a>
+            or see my code on
+            <a href="https://github.com/cleanos123" target="_blank" rel="noopener">GitHub</a>.
+        </p>
+    </footer>
 
 </body>
 
